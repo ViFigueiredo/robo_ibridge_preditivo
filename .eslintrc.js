@@ -11,6 +11,7 @@ module.exports = {
   },
   rules: {
     eqeqeq: 0,
+    'consistent-return': 0,
     'no-console': 0,
     'operator-linebreak': 0,
     'import/newline-after-import': 0,
