@@ -19,7 +19,7 @@ const convertDataApi = async (buffer) => {
   const csvData = encodedData.toString();
   const parsedData = Papa.parse(csvData, { header: true });
   const jsonData = parsedData.data;
-  const chunkSize = 3000; // Defina o tamanho desejado para os pedaços
+  const chunkSize = 5000; // Defina o tamanho desejado para os pedaços
   const chunks = chunkArray(jsonData, chunkSize);
 
   console.log(
@@ -43,6 +43,9 @@ const convertDataApi = async (buffer) => {
     } else {
       console.log(`Dados: ${date()} -> Dia improdutivo!`);
     }
+
+    console.log('Aguardando inicio da aplicação...');
+
   }
 };
 

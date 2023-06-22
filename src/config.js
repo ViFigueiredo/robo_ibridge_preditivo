@@ -19,6 +19,7 @@ const database = new Sequelize(db, user, pwd, {
     options: {
       encrypt: false,
       instanceName,
+      "requestTimeout": 300000
     },
   },
   // pool: {
