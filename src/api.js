@@ -2,7 +2,7 @@ const axios = require('axios');
 const date = require('./today');
 
 const consumoAPI = async () => {
-  const url = `https://avantti-crm.ibridge.net.br/bi/?k=7f9Gv8VXzzdGGpRfNzorrPYXlw47L1e4&inicio=${date()} 08:30:00&termino=${date()} 20:00:00&modo=producao`;
+  const url = `${process.env.API_URL}&inicio=${date()} 08:30:00&termino=${date()} 20:00:00&modo=producao`;
 
   try {
     await console.log('Baixando relatório preditivo...');
