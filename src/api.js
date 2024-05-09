@@ -1,8 +1,11 @@
 const axios = require('axios');
 const date = require('./today');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const consumoAPI = async () => {
-  const url = `${process.env.API_URL}&inicio=${date()} 08:30:00&termino=${date()} 20:00:00&modo=producao`;
+  const url = `https://avantti-crm.ibridge.net.br/bi/?k=${process.env.API_URL}&inicio=${date()} 08:30:00&termino=${date()} 20:00:00&modo=producao`;
 
   try {
     await console.log('Baixando relatório preditivo...');
