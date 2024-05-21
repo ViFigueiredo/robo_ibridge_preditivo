@@ -2,7 +2,7 @@
 
 const { database, DataTypes } = require('./config');
 
-const Preditivo = database.define('preditivo_api', {
+const Preditivo = database.define('preditivo_api_teste', {
   operacao_id: {
     type: DataTypes.STRING,
     allowNull: true,
@@ -64,6 +64,10 @@ const Preditivo = database.define('preditivo_api', {
     allowNull: true,
   },
   chamada_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  chamada_id_unico: {
     type: DataTypes.STRING,
     allowNull: true,
   },
@@ -183,6 +187,22 @@ const Preditivo = database.define('preditivo_api', {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  operador_equipe: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  fila_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  fila_estado_nome: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  perfil: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   ocorrencia_id: {
     type: DataTypes.STRING,
     allowNull: true,
@@ -240,6 +260,10 @@ const Preditivo = database.define('preditivo_api', {
     allowNull: true,
   },
   chamada_status: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  forma_pagamento: {
     type: DataTypes.STRING,
     allowNull: true,
   },

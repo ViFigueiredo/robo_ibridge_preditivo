@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const consumoAPI = async () => {
-  const url = `https://avantti-crm.ibridge.net.br/bi/?k=${process.env.API_URL}&inicio=${date()} 08:30:00&termino=${date()} 20:00:00&modo=producao`;
+  const url = `https://avanttinew-crm.ibridge.net.br/bi/?k=${process.env.API_URL}&inicio=${date()}%2000:00:00&termino=${date()}%2023:00:00`;
 
   try {
     await console.log('Baixando relatório preditivo...');
