@@ -2,7 +2,7 @@
 
 const { database, DataTypes } = require('./config');
 
-const Preditivo = database.define('preditivo_api_teste', {
+const Preditivo = database.define('preditivo_apis_v2', {
   operacao_id: {
     type: DataTypes.STRING,
     allowNull: true,
