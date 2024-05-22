@@ -18,7 +18,7 @@ async function App() {
   }
 }
 
-App();
+// App();
 
 // Agenda a tarefa para ser executada todos os dias às 20:00 (exceto sábados e domingos)
-// cron.schedule('00 20 * * *', () => { App() });
+cron.schedule('00 20 * * *', () => { App() });
