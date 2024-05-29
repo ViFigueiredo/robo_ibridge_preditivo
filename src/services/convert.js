@@ -22,9 +22,7 @@ const convertDataApi = async (buffer) => {
   const chunkSize = 5000; // Defina o tamanho desejado para os pedaços
   const chunks = chunkArray(jsonData, chunkSize);
 
-  console.log(
-    `Foram baixados : ${jsonData.length} registros referente à ${date()}.`,
-  );
+  console.log(`${date()} -> ${jsonData.length} registros baixados.`);
 
   if (jsonData != '' && jsonData != null && jsonData != undefined) {
     // loop no json preditivo e insere no banco em lotes
@@ -38,15 +36,11 @@ const convertDataApi = async (buffer) => {
       insertedCount += result.length;
       console.log(`Inseridos ${chunks[i].length} registros.`);
     }
-    if (insertedCount === jsonData.length) {
+    if (insertedCount === jsonData.length)
       console.log(`Dados: ${date()} -> Salvo com sucesso!`);
-    } else {
-      console.log(`Dados: ${date()} -> Dia improdutivo!`);
-    }
-
-    console.log('Aguardando inicio da aplicação...');
-
+    else console.log(`Dados: ${date()} -> Dia improdutivo!`);
   }
+  console.log('Aguardando inicio da aplicação...');
 };
 
 module.exports = convertDataApi;

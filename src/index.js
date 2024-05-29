@@ -1,11 +1,12 @@
 const cron = require('node-cron');
-const { database } = require('./config');
-const testConnection = require('./connection');
-const createTable = require('./createTable');
-const consumoAPI = require('./api');
-const convertDataApi = require('./convert');
+const { database } = require('./services/config');
+const testConnection = require('./services/connection');
+const createTable = require('./services/createTable');
+const consumoAPI = require('./services/api');
+const convertDataApi = require('./services/convert');
+const date = require('./services/today');
 
-console.log('Aguardando inicio da aplicação...')
+console.log(`${date()} - Aguardando inicio da aplicação...`)
 
 async function App() {
   try {
